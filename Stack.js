@@ -1,32 +1,35 @@
-function Stack() {
-	let items = [];
+class Stack {
 
-	this.push = function(element) {
-		items.push(element);
+	constructor () {
+		this.items = [];
 	}
 
-	this.pop = function() {
-		return items.pop();
+	push(element) {
+		this.items.push(element);
 	}
 
-	this.peek = function() {
-		return items[items.length-1];
+	pop() {
+		return this.items.pop();
 	}
 
-	this.isEmpty = function() {
-		return items.length == 0;
+	peek() {
+		return this.items[this.items.length-1];
 	}
 
-	this.size = function() {
-		return items.length;
+	isEmpty() {
+		return this.items.length == 0;
+	}
+
+	size() {
+		return this.items.length;
 	} 
 
-	this.clear = function() {
-		items = [];
+	clear() {
+		this.items = [];
 	}
 
-	this.print = function() { 
-		console.log(items.toString());
+	print() { 
+		console.log(this.items.toString());
 	}
 }
 
